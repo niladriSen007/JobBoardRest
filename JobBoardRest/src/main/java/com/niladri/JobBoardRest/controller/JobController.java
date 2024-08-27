@@ -19,7 +19,7 @@ public class JobController {
         return jobService.getAllJobs();
     }
 
-    @GetMapping("/job/{postId}")
+    @GetMapping(path="/job/{postId}", produces = "application/json")
     public JobModel getJobById(@PathVariable("postId") int postId) {
         return jobService.getJobById(postId);
     }
